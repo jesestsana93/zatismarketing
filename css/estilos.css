@@ -44,8 +44,25 @@ body {
   flex-direction: column;
 }
 
-.encabezado {
+#inicio:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  content: '';
+}
+
+#inicio .logo {
+  z-index: 100;
+  width: 150px;
+  height: auto;
+}
+
+#inicio .encabezado {
   /*background: #111111;*/
+  z-index: 100;
   color: #fff;
   padding: .5rem 0;
   -webkit-transition: all .5s ease;
@@ -57,7 +74,7 @@ body {
   padding: 1rem 0;
 }
 
-.encabezado .container {
+/* .encabezado .container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -69,12 +86,9 @@ body {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-}
+} */
 
-.encabezado .logo img {
-  width: 150px;
-  height: auto;
-}
+
 
 
 .boton-menu {
@@ -118,7 +132,8 @@ body {
   color: #12AFAF;
 }
 
-.texto-encabezado {
+#inicio .texto-encabezado {
+  z-index: 100;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -189,4 +204,97 @@ body {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+}
+
+/*-------------------------------
+SECCION SERVICIOS
+--------------------------------*/
+.servicios {
+  background: url("../images/fondo-servicios.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed !important;
+  color: #fff;
+}
+
+.servicios article {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 1rem 0;
+  flex-direction: column;
+}
+
+.clientes a img{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.clientes img {
+  width: 150px;
+}
+
+
+/*-------------------------------
+SLIDER DE CLIENTES
+--------------------------------*/
+/* Dots */
+.slick-dots {
+  width: 100%;
+  height: 30%;
+  /* color of container */
+}
+
+.slick-active button::before {
+  color: blue;
+  opacity: 1;
+}
+
+.slick-dots li button::before {
+  color: red;
+  /* color of dots */
+  opacity: .5;
+  /* opacity of dots */
+  background-color: transparent;
+  font-size: 37px;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  z-index: 100;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 40%;
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: #14b9d5;
+  border-radius: 20px;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  background: red;
 }
