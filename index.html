@@ -20,17 +20,15 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!--  CARGA DE KIT DE FONT AWESOME 6-->
     <script src="https://kit.fontawesome.com/3b420fba03.js" crossorigin="anonymous"></script>
-    <!-- CARGA DE FUENTES DE GOOGLE -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;0,900;1,500;1,900&display=swap"
-        rel="stylesheet">
+    <!-- Carga de Fuentes de google-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <!-- CARGA DE ANIMATE.CSS PARA EL FUNCIONAMIENTO DE ANIMACIONES CON WOW.JS -->
     <link href="css/animate.css" rel="stylesheet">
     <!--  CARGA DE GALERIA DE IMÁGENES CON EL SLIDER SLICK.CSS -->
     <link href="css/slick.css" rel="stylesheet">
     <!--Add the new slick-theme.css if you want the default styling-->
     <link type="text/css" href="css/slick-theme.css" rel="stylesheet">
-
+    
     <!-- CARGA DE ESTILOS CSS PERSONALIZADOS -->
     <link href="css/estilos.css" rel="stylesheet">
 </head>
@@ -40,8 +38,8 @@
     =            Sección inicio            =
     ======================================-->
     <section id="inicio">
-        <header class="fixed-top" role="banner" id="">
-            <navbar class="navbar navbar-dark navbar-expand-lg" id="menu-navegacion">
+        <header class="encabezado fixed-top py-0" role="banner" id="encabezado">
+            <navbar class="navbar navbar-light navbar-expand-lg py-0" id="menu-navegacion">
                 <div class="container">
                     <!--LOGOTIPO DEL SITIO-->
                     <a class="navbar-brand" href="index.html">
@@ -56,9 +54,9 @@
                     <!--Barra de navegación -->
                     <div class="collapse navbar-collapse" id="menu-principal">
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#quienes-somos">Quienes somos </a></li>
-
+                            <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#quienes-somos">Quiénes somos </a></li>
+                            <li class="nav-item"><a class="nav-link" href="#nuestra-experiencia">Nuestra experiencia</a></li>
                             <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
                         </ul><!-- /.navbar-nav-->
                     </div>
@@ -207,7 +205,7 @@
     <!--=====================================
     =            Sección clientes            =
     ======================================-->
-    <section class="mt-5" id="clientes">
+    <section class="mt-5" id="nuestra-experiencia">
         <div class="container ">
             <div class="row">
                 <div class="col-12">
@@ -250,7 +248,7 @@
     </section>
 
 
-    <footer class="text-white mt-5" style="background-color: #103e3e;">
+    <footer class="text-white mt-5" style="background-color: #103e3e;" id="contacto">
         <div class="container pt-5">
             <div class="row">
                 <div class="contacto">
@@ -292,10 +290,7 @@
                         <div class="col-12 col-lg-6">
                             <h5>Mexicali</h5>
                             <p>Av. Arcangeles 1239 priv. San Miguel Mexicalu i B.C</p>
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.7933975041465!2d-99.11716348578383!3d19.29134875018263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0177b5bc252f%3A0x177dffa253385185!2sAv.%20Cafetales%201032%2C%20Coapa%2C%20Granjas%20Coapa%2C%20Tlalpan%2C%2014330%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1676187498329!5m2!1ses-419!2smx"
-                                width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3359.6128745323563!2d-115.41387848548561!3d32.643131298108436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d771084dc4f70b%3A0xb53472b49d1625a9!2sArcangeles%201239%2C%20Zona%20Sin%20Asignaci%C3%B3n%20de%20Nombre%20de%20Colonia%2C%2021254%20Mexicali%2C%20B.C.!5e0!3m2!1ses-419!2smx!4v1678248579351!5m2!1ses-419!2smx" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -314,6 +309,8 @@
 
     <script src="js/wow.min.js"></script>
     <script src="js/smooth-scroll.min.js"></script>
+    <!-- Carga de "page-scroll-to-id" | Crean el efecto de scroll entre los enlaces-->
+    <script src="js/jquery.malihu.PageScroll2id.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/sitio.js"></script>
 

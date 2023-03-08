@@ -18,17 +18,24 @@ $(function () {
 
 
     /*------------------------
-    INICILIZANDO WOW
+    2. INICILIZANDO WOW
     -------------------------*/
     new WOW().init();
 
-    /*----------------------------------
-    Iniciamos smoothScroll (Scroll Suave)
-    --------------------------------*/
+    /*---------------------------------------------------------------
+    3. Iniciando smoothScroll (Scroll Suave) para la flecha de bajar
+    ----------------------------------------------------------------*/
     smoothScroll.init({
         speed: 1000, // Integer. How fast to complete the scroll in milliseconds
         offset: 100, // Integer. How far to offset the scrolling anchor location in pixels
+    });
 
+    /*---------------------------------------------------------------
+    4. INICIANDO "page-scroll-to-id" para navegacion ligera del menu
+     ---------------------------------------------------------------*/
+    $('#menu-principal a').mPageScroll2id({
+        offset: 70,
+        highlightClass:'active'
     });
 
     /*---------------------------------
@@ -37,14 +44,14 @@ $(function () {
     $(window).scroll(function () {
         var nav = $('.encabezado');
         var scroll = $(window).scrollTop();
-
+        console.log("scroll: " + scroll);
         if (scroll >= 80) {
-            nav.addClass("fondo-menu");
+            nav.addClass('.fondo-menu');
         } else {
-            nav.removeClass("fondo-menu");
+            nav.removeClass('.fondo-menu');
         }
     });
-
+   
 
     /*-----------------------------------------------------------
     2. CONFIGURACION DE SLICK PARA LA PARTE DE ALGUNOS DE NUESTROS CLIENTES
@@ -91,4 +98,5 @@ $(function () {
             }
         ]
     });
+
 });
