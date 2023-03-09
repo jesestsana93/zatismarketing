@@ -8,12 +8,12 @@ $(function () {
 
 
     /*Al hacer click en un enlace del menú principal */
-    $('#menu-principal .navbar-nav a').click(function () {
+    $('#enlacesMenuPrincipal .navbar-nav a').click(function () {
         /* 1) Quita la clase ".icono-cerrar" */
         $('.boton-menu').removeClass('icono-cerrar');
 
         /*2) Contraemos el menu */
-        $('#menu-principal .navbar-collapse').collapse('hide');
+        $('#enlacesMenuPrincipal .navbar-collapse').collapse('hide');
     });
 
 
@@ -33,7 +33,7 @@ $(function () {
     /*---------------------------------------------------------------
     4. INICIANDO "page-scroll-to-id" para navegacion ligera del menu
      ---------------------------------------------------------------*/
-    $('#menu-principal a').mPageScroll2id({
+    $('#enlacesMenuPrincipal a').mPageScroll2id({
         offset: 70,
         highlightClass:'active'
     });

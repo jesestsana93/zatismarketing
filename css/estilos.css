@@ -77,7 +77,6 @@ body {
   padding: 1rem 0;
 }
 
-
 .boton-menu {
   border: 0;
   font-size: 2rem;
@@ -87,27 +86,46 @@ body {
   color: #fff;
 }
 
-.boton-menu:focus {
-  outline: 0;
+ .boton-menu:before {
+  font-family: 'Font Awesome 5 Free';
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--rojos);
+  content: "\f0c9";
 }
 
-#menu-principal {
+/* .icono-cerrar:before {
+  position: relative;
+  left: .2rem;
+  font-size: 2.5rem;
+  content: "\f00d";
+} */
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.navbar>.container{
+  justify-content: center !important;
+}
+
+#enlacesMenuPrincipal {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
 }
 
-#menu-principal ul {
+#enlacesMenuPrincipal ul {
   padding: 0;
   list-style: none;
   margin: 1rem 0 0 0;
   z-index: 300;
 }
 
-#menu-principal ul a {
+#enlacesMenuPrincipal ul a {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: .8rem 0;
   text-align: center;
   color: #000;
@@ -117,13 +135,14 @@ body {
 }
 
 @media(min-width:992px){
-  #menu-principal ul a {
+  #enlacesMenuPrincipal ul a {
     padding: .8rem 1.5rem;
+    justify-content: space-between;
   }
 }
 
-#menu-principal ul li a:hover,
-#menu-principal ul li a.active {
+#enlacesMenuPrincipal ul li a:hover,
+#enlacesMenuPrincipal ul li a.active {
   color: var(--azul);
   border-bottom: 1px solid var(--azul);
 }
